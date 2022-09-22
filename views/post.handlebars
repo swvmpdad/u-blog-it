@@ -1,0 +1,22 @@
+<section class="posts">
+    <div class="post">
+        <a class="post-title" href="/post/{{post.id}}">
+            <h3>{{post.title}}</h3>
+            <p>{{post.created_at}}</p>
+        </a>
+        <div class="post-content">
+            <p>{{post.post_content}}</p>
+            <p class="comment-count">{{post.comments.length}} Comments</p>
+        </div>
+    </div>
+</section>
+<section class="comment-section">
+    <div class="comments">
+        {{#each post.comments as |comment|}}
+        <div>
+                <h3>User: {{comment.user.username}}</h3>
+            <p>{{comment.comment_text}}</p>
+        </div>
+        {{/each}}
+    </div>
+</section>
