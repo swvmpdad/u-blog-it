@@ -94,6 +94,33 @@ header nav ul li a:hover {
     background-color: var(--primary-color);
 }
 
+.posts-title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    width: 100%;
+    text-decoration: none;
+}
+
+.posts-title:hover {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.posts-title:visited {
+    color: #937F7F;
+}
+
+.posts-title h3 {
+    padding: 5px;
+}
+
+.posts-title p {
+    padding: 7px;
+}
+
 .post-title {
     display: flex;
     flex-wrap: nowrap;
@@ -104,23 +131,6 @@ header nav ul li a:hover {
     text-decoration: none;
 }
 
-.post-title:hover {
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.post-title:visited {
-    color: #937F7F;
-}
-
-.post-title h3 {
-    padding: 5px;
-}
-
-.post-title p {
-    padding: 7px;
-}
-
 .post-content {
     padding: 15px 10px 0px 10px;
 }
@@ -129,16 +139,47 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments-title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    width: 100%;
+    text-decoration: none;
+}
+
+.comment-title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    width: 100%;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.comment-title h4 {
+    padding: 4px;
+}
+
+.comment-title p {
+    padding: 2px;
 }
 
 .comments {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     margin: 20px auto;
     width: 80%;
     justify-content: left;
-    align-items: center;
+    align-items: left;
     border: 1px solid var(--secondary-color);
     background-color: var(--primary-color);
 }
@@ -146,6 +187,17 @@ header nav ul li a:hover {
 .comment-count {
     padding-top: 6px;
     padding-bottom: 2px;
+}
+
+.comment p {
+    margin-top: 3px;
+}
+
+.comment-form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 
 .container {
@@ -156,6 +208,15 @@ header nav ul li a:hover {
 
 .container label {
     font-size: larger;
+}
+
+.comment-form textarea {
+    width: 50%;
+    height: 100px;
+}
+
+#submit {
+    width: 70px;
 }
 
 .login-card {
