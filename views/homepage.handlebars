@@ -1,7 +1,7 @@
 <section class="posts">
     {{#each posts as |post|}}
     <div class="post">
-        <a class="posts-title" href="/post/{{post.id}}">
+        <a class="posts-title" href="/post?id={{post.id}}">
             <h3>{{post.title}}</h3>
             <p>{{post.created_at}}</p>
         </a>
@@ -12,4 +12,3 @@
     </div>
     {{/each}}
 </section>
-<script src="./js/comment.js"></script>

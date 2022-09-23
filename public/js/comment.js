@@ -3,9 +3,7 @@ async function commentFormHandler(event) {
 
     const comment_text = document.querySelector('texarea[name="comment-body"]').value.trim();
 
-    const post_id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-    ];
+    const post_id = window.location.toString().split('/')
     
     console.log(comment_text, post_id);
     // const response = await fetch('/api/comments', {

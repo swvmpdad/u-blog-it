@@ -45,10 +45,13 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/post/:id', withAuth, (req, res) => {
+router.get('/post?id=:id', withAuth, (req, res) => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
     Post.findOne({
         where: {
-            id: req.params.id
+            id: urlParams.get('id')
         },
         attributes: [
           'id',
