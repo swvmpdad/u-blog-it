@@ -8,7 +8,12 @@
         <div class="post-content">
             <p>{{post.post_content}}</p>
             <p class="comment-count">{{post.comments.length}} Comments</p>
-            <button id="delete-{{post.id}}" type="delete">Delete Post</button>
+            <div class="delete">
+                <button id="delete-{{post.id}}" type="delete">
+                    Delete Post
+                    <p class="hidden-id">{{post.id}}</p>
+                </button>
+            </div>
             <button id="edit-{{post.id}}" type="edit">Edit Post</button>
         </div>
     </div>
@@ -31,3 +36,4 @@
     </div>
 </form>
 <script src="/js/post.js"></script>
+<script src="/js/delete.js"></script>
