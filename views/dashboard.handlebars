@@ -1,0 +1,33 @@
+<section class="posts">
+    {{#each posts as |post|}}
+    <div class="post">
+        <a class="posts-title" href="/post/{{post.id}}">
+            <h3>{{post.title}}</h3>
+            <p>{{post.created_at}}</p>
+        </a>
+        <div class="post-content">
+            <p>{{post.post_content}}</p>
+            <p class="comment-count">{{post.comments.length}} Comments</p>
+            <button id="delete-{{post.id}}" type="delete">Delete Post</button>
+            <button id="edit-{{post.id}}" type="edit">Edit Post</button>
+        </div>
+    </div>
+    {{/each}}
+</section>
+<form class="comments comment-form">
+    <div class="comments-title">
+        <h3>New Post:</h3>
+    </div>
+    <div class="post-title-text">
+        <h4>Post Title:</h4>
+        <textarea name="post-title"></textarea>
+    </div>
+    <div>
+        <h4 class="post-title-text">Post:</h4>
+        <textarea name="post-body"></textarea>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+<script src="/js/post.js"></script>

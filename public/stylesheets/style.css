@@ -235,6 +235,15 @@ form {
     padding: 5px;
 }
 
+.post-title-text h4 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.post-title-text textarea {
+    height: 40px;
+}
+
 @media screen and (max-width: 980px) {
     header {
         padding-bottom: 0;

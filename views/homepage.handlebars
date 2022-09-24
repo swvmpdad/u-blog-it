@@ -2,7 +2,7 @@
     {{#each posts as |post|}}
     <div class="post">
         <a class="posts-title" href="/post/{{post.id}}">
-            <h3>{{post.title}}</h3>
+            <h3>{{post.user.username}}: {{post.title}}</h3>
             <p>{{post.created_at}}</p>
         </a>
         <div class="post-content">
