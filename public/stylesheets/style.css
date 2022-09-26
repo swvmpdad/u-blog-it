@@ -252,6 +252,10 @@ form {
     display: none;
 }
 
+.edit {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 980px) {
     header {
         padding-bottom: 0;

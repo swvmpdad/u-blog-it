@@ -1,7 +1,7 @@
 async function deletePostHandler(event) {
     event.preventDefault();
 
-    const id = querySelector('.hidden-id').innerHTML;
+    id = event.target.dataset;
 
     if (id) {
         console.log(id);
@@ -22,4 +22,4 @@ async function deletePostHandler(event) {
     }
 }
 
-document.querySelector('.post').addEventListener('delete', deletePostHandler);
+document.querySelector('.posts').addEventListener('delete', deletePostHandler);

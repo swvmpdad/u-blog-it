@@ -1,6 +1,6 @@
-<section class="posts">
+<form class="posts">
     {{#each posts as |post|}}
-    <form class="post">
+    <section class="post">
         <a class="posts-title" href="/post/{{post.id}}">
             <h3>{{post.title}}</h3>
             <p>{{post.created_at}}</p>
@@ -9,16 +9,15 @@
             <p>{{post.post_content}}</p>
             <p class="comment-count">{{post.comments.length}} Comments</p>
             <div class="delete">
-                <button id="delete-{{post.id}}" type="delete">
+                <button id="delete-{{post.id}}" type="delete" data-post="{{post.id}}">
                     Delete Post
-                    <p class="hidden-id">{{post.id}}</p>
                 </button>
             </div>
-            <a href="/update-post/{{post.id}}"><button id="edit-{{post.id}}" type="edit">Edit Post</button></a>
+            <button id="edit-{{post.id}}" type="edit"><a class="edit" href="/update-post/{{post.id}}">Edit Post</a></button>
         </div>
-    </form>
+    </section>
     {{/each}}
-</section>
+</form>
 <form class="comments comment-form">
     <div class="comments-title">
         <h3>New Post:</h3>
@@ -37,4 +36,3 @@
 </form>
 <script src="/js/post.js"></script>
 <script src="/js/delete.js"></script>
-<script src="/js/edit.js"></script>
