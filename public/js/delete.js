@@ -4,6 +4,7 @@ async function deletePostHandler(event) {
     const id = querySelector('.hidden-id').innerHTML;
 
     if (id) {
+        console.log(id);
         const response = await fetch(`/api/posts/${id}`, {
         method: 'DELETE',
         headers: {
