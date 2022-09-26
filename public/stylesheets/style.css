@@ -248,6 +248,10 @@ form {
     display: none;
 }
 
+#post-id {
+    display: none;
+}
+
 @media screen and (max-width: 980px) {
     header {
         padding-bottom: 0;

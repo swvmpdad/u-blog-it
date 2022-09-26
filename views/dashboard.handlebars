@@ -1,6 +1,6 @@
 <section class="posts">
     {{#each posts as |post|}}
-    <div class="post">
+    <form class="post">
         <a class="posts-title" href="/post/{{post.id}}">
             <h3>{{post.title}}</h3>
             <p>{{post.created_at}}</p>
@@ -14,9 +14,9 @@
                     <p class="hidden-id">{{post.id}}</p>
                 </button>
             </div>
-            <button id="edit-{{post.id}}" type="edit">Edit Post</button>
+            <a href="/update-post/{{post.id}}"><button id="edit-{{post.id}}" type="edit">Edit Post</button></a>
         </div>
-    </div>
+    </form>
     {{/each}}
 </section>
 <form class="comments comment-form">

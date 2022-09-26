@@ -118,4 +118,28 @@ router.get('/dashboard', withAuth, (req, res) => {
         });
 });
 
+router.get('/update-post/:id', withAuth, (req, res) => {
+    Post.findOne({
+        where:{
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'post_content',
+            'title',
+            'created_at'
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+        .then(dbPostData => {
+            const post = dbPostData.get({ plain: true });
+            res.render('update-post', { loggedIn: req.session.loggedIn, post });
+        });
+});
+
 module.exports = router;
